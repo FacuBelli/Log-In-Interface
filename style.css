@@ -16,7 +16,7 @@ body{
 .full-screen-container{
     background-image:url(./fondo.jpg) ;
     height: 100vh;
-    width: 100vh;
+    width: 100%;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -26,7 +26,7 @@ body{
 
 
 .login-container{
-    --color: hsl(var(--primary-dark-hsl),.7);
+    --color: hsl(var(--primary-dark-hsl),.6);
     background-color: var(--color); /*Transparencia del fondo*/
     box-shadow: 0 0 15px 0 var(--color) ;
     padding: 40px 30px;
@@ -37,4 +37,42 @@ body{
 
 .login-title{
     margin: 0;
+    color:#fff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+    margin-top: 48px;
+
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.input-group label{
+    color: #fff;
+    font-weight: lighter;
+
+}
+
+.input-group input{
+    font-size: 1.25rem;
+    padding: .5rem;
+    background-color: hsl(var(--primary-light-hsl),.3);
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    font-weight: lighter;
+}
+
+.input-group input:focus{
+    box-shadow: 0 0 0 1px hsl(var(--primary-hsl));
 }
