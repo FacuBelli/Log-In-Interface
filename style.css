@@ -4,9 +4,11 @@
 }
 
 :root{
-    --primary-light-hsl:36, 43%, 85%;
-    --primary-hsl: 36, 43%, 75%;
-    --primary-dark-hsl:36, 43%, 60%;
+    --primary-light-hsl:200, 100%, 91%;
+    --primary-hsl: 200, 100%, 58%;
+    --primary-dark-hsl:200, 100%, 6%;
+    --success-hsl: 100, 60%, 50%;
+    --error-hsl: 0, 60%, 50%;
 }
 
 body{
@@ -29,9 +31,10 @@ body{
     --color: hsl(var(--primary-dark-hsl),.6);
     background-color: var(--color); /*Transparencia del fondo*/
     box-shadow: 0 0 15px 0 var(--color) ;
-    padding: 40px 30px;
+    padding: 20px 30px;
     width: 80%;
     max-width: 600px;
+    height: 100%;
     border-radius: 20px;
 }
 
@@ -46,9 +49,8 @@ body{
 .form{
     display: flex;
     flex-direction: column;
-
     gap: 7px;
-    margin-top: 48px;
+    margin-top: 40px;
 
 }
 
@@ -75,4 +77,53 @@ body{
 
 .input-group input:focus{
     box-shadow: 0 0 0 1px hsl(var(--primary-hsl));
+}
+
+
+.input-group.success input{
+    box-shadow: 0 0 0 1px hsl(var(--success-hsl));
+}
+
+.input-group.error input{
+    box-shadow: 0 0 0 1px hsl(var(--error-hsl));
+}
+
+.input-group .msg{
+    display: none;
+    font-size: .75rem;
+}
+
+.input-group.success .msg{
+    color:hsl(var(--success-hsl))
+}
+.input-group.success .msg
+.input-group.error .msg{
+    display: block;
+
+}
+.input-group.error .msg{
+    color: hsl(var(--error-hsl));
+
+}
+
+.buttons-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+#login-button{
+    width: 100px;
+    margin-right: 10px;   
+
+}
+#cancel-button{
+    width: 100px;
+    margin-left: 10px; 
+
+}
+
+label{
+    text-align: center;
 }
