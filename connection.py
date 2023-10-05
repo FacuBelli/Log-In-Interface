@@ -1,19 +1,12 @@
-import pyodbc
 
-
-
-
-server = "FACU\SQLEXPRESS"
-user = "FACU\Chevrolet"
-database = "Testing"
-
+user = " root"
+database = "testing"
+url = " localhost"
 
 try:
-    connection_string = f'DRIVER=SQL Server;SERVER={server};DATABASE={database};UID={user}; Trusted_Connection=yes;'
-    connection = pyodbc.connect(connection_string)
-    
+    connection_string = f'mysql+pymysql://{user}:@{url}/{database}'
 
 
 
-except pyodbc.Error as e:
+except ValueError as e:
     print("Error al conectar a la base de datos: ",e)
